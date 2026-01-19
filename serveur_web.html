@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport SAÉ S1.03 - Groupe_Kylian_Hatim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ressources/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="#">SAÉ S1.03 - Groupe_Kylian_Hatim</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="installation.html">Installation VM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="configuration.html">Configuration Linux</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="serveur_web.html">Serveur Web</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <header class="text-center mb-5">
+            <h1>Serveur Web et Déploiement</h1>
+            <p class="lead">Partie 3 : Mise en ligne du rapport</p>
+        </header>
+
+        <section id="installation-serveur" class="mt-4">
+            <h2>1. Installation et vérification d'Apache</h2>
+            <p>Après l'installation via <code>apt</code>, nous avons vérifié que le service était fonctionnel :</p>
+            
+            <div class="bg-dark text-light p-3 rounded mb-3">
+                <code style="color: #ff69b4;">sudo service apache2 status</code>
+            </div>
+
+            <div class="text-center mb-4">
+                <img src="ressources/img/verif_apache.png" alt="Statut du serveur Apache" class="img-fluid border rounded shadow">
+                <p class="small text-muted mt-2">Preuve du service Apache actif (running) sur la VM sae1final.</p>
+            </div>
+        </section>
+
+        <section id="deploiement" class="mt-4">
+            <h2>2. Déploiement et configuration du répertoire</h2>
+            <p>Pour mettre en ligne notre rapport, nous avons configuré l'arborescence sur le serveur Linux :</p>
+            <ul>
+                <li><strong>Type :</strong> SFTP</li>
+                <li><strong>Hôte :</strong> 10.0.2.15</li>
+                <li><strong>Dossier cible :</strong> <code>/var/www/html/sae103/</code></li>
+            </ul>
+
+            <div class="text-center mt-3">
+                <img src="ressources/img/verif_dossier.png" alt="Création du dossier sae103" class="img-fluid border rounded shadow">
+                <p class="small text-muted mt-2">Vérification de la création du dossier cible <code>sae103</code> sur le serveur Debian.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center py-4 mt-5 border-top">
+        <p>IUT Paris Rives de Seine - Département Informatique - 2025/2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
